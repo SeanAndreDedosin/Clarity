@@ -4,10 +4,8 @@
  */
 package clarityapp;
 
-/**
- *
- * @author Andre
- */
+/*dhfeja*/
+
 public abstract class HealthForm {
     private String name;
     

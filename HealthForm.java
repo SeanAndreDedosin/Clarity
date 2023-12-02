@@ -7,7 +7,10 @@ package clarityapp;
 /*dhfeja*/
 
 public abstract class HealthForm {
-    private String name;
+    private int question;
+    private String grade;
+
+    
     
     
 }

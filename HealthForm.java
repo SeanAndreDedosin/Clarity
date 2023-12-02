@@ -7,37 +7,35 @@ package clarityapp;
 /*Andre Github*/
 /*Andre Author*/
 
-public abstract class HealthForm {
+public class HealthForm {
     //declare data members
     private int mark;
     private String grade;
-    private String fQuestions[];
 
     //constructor
-    public HealthForm(int question, String grade) {
-        mark = 0;
-        grade = " ";
+    public void setMark(int mark){
+        this.mark = mark;
     }
-    
+
     //compute
     public void compute(){
-        if(mark<=0 && mark<=8){
+        if(mark>=0 && mark<=8){
             grade = "You are all Good!";
         }
-        else if(mark<=9 && mark<=18){
-            grade = "You have a few underlying issues that need some improvement";
+        else if(mark>=9 && mark<=18){
+            grade = "You have a few underlying issues that need some improvement.";
         }
-        else if(mark<=19 && mark<=24){
-            grade = "It is best to seek Professional Help. Do not be afraid to ask, we are there for you";
+        else if(mark>=19 && mark<=24){
+            grade = "It is best to seek Professional Help. Do not be afraid to ask, we are there for you.";
         }
         else{
-            grade = "Please input Something";
+            grade = "Please input Something.";
         }
     }
-    
+
     //getters
     public String getGrade() {
         return grade;
     }
-    
+
 }

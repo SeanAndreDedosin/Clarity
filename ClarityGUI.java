@@ -6,6 +6,7 @@ package clarityapp;
 
 /*hello*/
 /*just a test to see if it works, and it does*/
+//hello test
 
 /**
  *

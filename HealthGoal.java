@@ -9,5 +9,5 @@ package clarityapp;
  * @author Andre
  */
 public class HealthGoal {
-    
+    private int test;
 }

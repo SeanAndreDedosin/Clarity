@@ -306,6 +306,7 @@ public class QuoteGUI extends javax.swing.JFrame {
 
     private void quoteRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quoteRBActionPerformed
         // TODO add your handling code here:
+        // when quote radio button is selected certain things will visible 
         authorLBL.setVisible(true);
         quoteLBL.setVisible(true);
         moodLBL.setVisible(false);
@@ -318,6 +319,7 @@ public class QuoteGUI extends javax.swing.JFrame {
 
     private void diaryRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaryRBActionPerformed
         // TODO add your handling code here:
+        //when diary radio button is selected certain things will be visible
         authorLBL.setVisible(false);
         quoteLBL.setVisible(false);
         moodLBL.setVisible(true);
@@ -329,7 +331,7 @@ public class QuoteGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_diaryRBActionPerformed
 
     private void addBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBTNActionPerformed
-        // TODO add your handling code here:
+        // add quote or diay log depending on which radio button is selected different things will be visible
         if (quoteRB.isSelected()) {
             Quote a = new Quote();
             a.setDay(dayTF.getText());
@@ -350,7 +352,7 @@ public class QuoteGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_addBTNActionPerformed
 
     private void displayBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayBTNActionPerformed
-        // TODO add your handling code here:
+        // displays the info 
         for (Quoted q : quotediary) {
             JOptionPane.showMessageDialog(null, q.getInfo());
         }
@@ -358,7 +360,7 @@ public class QuoteGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_displayBTNActionPerformed
 
     private void searchBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBTNActionPerformed
-        // TODO add your handling code here:
+        // seach using day 
          if(quotediary.isEmpty()){
             JOptionPane.showMessageDialog(null,"Sorry, there are nothing to search");
         }
@@ -374,7 +376,7 @@ public class QuoteGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_searchBTNActionPerformed
 
     private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
-        // TODO add your handling code here:
+        // search day and if itfs that day itll delete all the info of that
   if(quotediary.isEmpty()){
             JOptionPane.showMessageDialog(null,"Sorry, there are nothing to delete");
         }
@@ -390,8 +392,8 @@ public class QuoteGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteBTNActionPerformed
 
     private void saveBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBTNActionPerformed
-        // TODO add your handling code here:
-       /* File f;
+        // to save information to a file 
+       File f;
         FileOutputStream fStream;
         ObjectOutputStream oStream;
         
@@ -403,9 +405,9 @@ public class QuoteGUI extends javax.swing.JFrame {
             oStream.writeObject(quotediary);
             oStream.close();
         }
-        catch(IOException e){
-            System.out.println(e);
-        }*/
+        catch(IOException q){
+            System.out.println(q);
+        }
 
 
     }//GEN-LAST:event_saveBTNActionPerformed

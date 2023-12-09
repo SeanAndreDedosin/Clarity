@@ -909,7 +909,7 @@ public class QuizGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBTNActionPerformed
-        // TODO add your handling code here:
+        // if buttons not selected from a button group will  display this message
         if (!(
     (q1a1RB.isSelected() || q1a2RB.isSelected() || q1a3RB.isSelected() || q1a4RB.isSelected()) &&
     (q2a1RB.isSelected() || q2a2RB.isSelected() || q2a3RB.isSelected() || q2a4RB.isSelected()) &&
@@ -924,7 +924,7 @@ public class QuizGUI extends javax.swing.JFrame {
 )) {
     JOptionPane.showMessageDialog(null, "Please answer all questions");
 } else {
-            //lock buttons
+            //lock buttons so cant change buttons 
             q1a1RB.setEnabled(false);
             q1a2RB.setEnabled(false);
             q1a3RB.setEnabled(false);
@@ -988,7 +988,7 @@ public class QuizGUI extends javax.swing.JFrame {
         }
 
      {
-          
+          //calculates value of buttons 
         varibleResult = varible1 + varible2 + varible3 + varible4 + varible5 + varible6 + varible7 + varible8 + varible9 + varible10;
 
         if (varibleResult < 50 && varibleResult >= 15) {
@@ -1368,7 +1368,8 @@ public class QuizGUI extends javax.swing.JFrame {
     private javax.swing.JButton submitBTN;
     private javax.swing.JLabel titleLBL;
     // End of variables declaration//GEN-END:variables
-private static int varible1 = 0;
+//declare varibles to be assigned to each button
+    private static int varible1 = 0;
     private static int varible2 = 0;
     private static int varible3 = 0;
     private static int varible4 = 0;
